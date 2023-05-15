@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,25 +29,11 @@ public class fizzBuzzShould {
 
         assertEquals(output, fizzbuzzResult);
     }
-    @Test
-    void return_Fizz_when_given_three(){
-        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(3);
-        String expectedResult = "Fizz";
 
-        assertEquals(expectedResult, fizzbuzzResult);
-    }
-
-    @Test
-    void return_Fizz_when_given_six() {
-        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(6);
-        String expectedResult = "Fizz";
-
-        assertEquals(expectedResult, fizzbuzzResult);
-    }
-
-    @Test
-    void return_Fizz_when_given_nine() {
-        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(9);
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 9})
+    void return_Fizz_when_given_multiple_of_three(int inputNumber){
+        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(inputNumber);
         String expectedResult = "Fizz";
 
         assertEquals(expectedResult, fizzbuzzResult);
