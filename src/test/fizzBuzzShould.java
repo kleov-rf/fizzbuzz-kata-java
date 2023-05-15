@@ -25,4 +25,14 @@ public class fizzBuzzShould {
 
         assertEquals(expectedResult, fizzbuzzResult);
     }
+
+    @Test
+    void return_4_when_given_4 () {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+
+        String expectedResult = "4";
+        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(4);
+
+        assertEquals(expectedResult, fizzbuzzResult);
+    }
 }
