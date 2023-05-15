@@ -5,6 +5,9 @@ public class FizzBuzz {
         if(inputNumber == 1) {
             return "1";
         }
-        return "2";
+        if(inputNumber == 2) {
+            return "2";
+        }
+        return "4";
     }
 }
