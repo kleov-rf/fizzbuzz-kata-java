@@ -18,7 +18,11 @@ public class fizzBuzzShould {
     }
 
     @ParameterizedTest
-    @CsvSource({"1, '1'"})
+    @CsvSource({
+            "1, '1'",
+            "2, '2'",
+            "4, '4'"
+    })
     void return_the_number_when_given_not_special_number(int input, String output){
         String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(input);
 
