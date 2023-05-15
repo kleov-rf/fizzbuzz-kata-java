@@ -1,4 +1,9 @@
-package test.com.academy.fizzbuzzKata;
+package test;
+
+import main.FizzBuzz;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class fizzBuzzShould {
 
@@ -9,6 +14,6 @@ public class fizzBuzzShould {
         String expectedResult = "1";
         String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(1);
 
-        assertEquals(fizzbuzzResult, expectedResult);
+        assertEquals(expectedResult, fizzbuzzResult);
     }
 }
