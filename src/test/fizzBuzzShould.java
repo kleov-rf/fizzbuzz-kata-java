@@ -48,4 +48,12 @@ public class fizzBuzzShould {
         assertEquals(expectedResult, fizzbuzzResult);
     }
 
+    @Test
+    void return_FizzBuzz_when_given_fifteen(){
+        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(15);
+        String expectedResult = "FizzBuzz";
+
+        assertEquals(expectedResult, fizzbuzzResult);
+    }
+
 }
