@@ -5,6 +5,9 @@ public class FizzBuzz {
         if(inputNumber == 3) {
             return "Fizz";
         }
+        if(inputNumber == 6){
+            return "Fizz";
+        }
         return String.valueOf(inputNumber);
     }
 }
