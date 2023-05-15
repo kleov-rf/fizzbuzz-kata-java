@@ -39,24 +39,10 @@ public class fizzBuzzShould {
         assertEquals(expectedResult, fizzbuzzResult);
     }
 
-    @Test
-    void return_Buzz_when_given_5() {
-        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(5);
-        String expectedResult = "Buzz";
-
-        assertEquals(expectedResult, fizzbuzzResult);
-    }
-    @Test
-    void return_Buzz_when_given_25() {
-        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(25);
-        String expectedResult = "Buzz";
-
-        assertEquals(expectedResult, fizzbuzzResult);
-    }
-
-    @Test
-    void return_Buzz_when_given_50() {
-        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(50);
+    @ParameterizedTest
+    @ValueSource(ints = {5, 25, 50})
+    void return_Buzz_when_given_multiple_of_five(int inputNumber){
+        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(inputNumber);
         String expectedResult = "Buzz";
 
         assertEquals(expectedResult, fizzbuzzResult);
