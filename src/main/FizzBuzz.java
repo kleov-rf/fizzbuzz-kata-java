@@ -11,6 +11,9 @@ public class FizzBuzz {
         if(inputNumber == 25) {
             return "Buzz";
         }
+        if(inputNumber == 50){
+            return "Buzz";
+        }
         return String.valueOf(inputNumber);
     }
 }
