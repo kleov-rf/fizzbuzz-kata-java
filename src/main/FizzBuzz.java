@@ -8,6 +8,9 @@ public class FizzBuzz {
         if(inputNumber == 5) {
             return "Buzz";
         }
+        if(inputNumber == 25) {
+            return "Buzz";
+        }
         return String.valueOf(inputNumber);
     }
 }
