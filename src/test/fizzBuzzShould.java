@@ -28,5 +28,12 @@ public class fizzBuzzShould {
 
         assertEquals(output, fizzbuzzResult);
     }
+    @Test
+    void return_Fizz_when_given_three(){
+        String fizzbuzzResult = fizzbuzz.numberToFizzBuzz(3);
+        String expectedResult = "Fizz";
+
+        assertEquals(expectedResult, fizzbuzzResult);
+    }
 
 }
