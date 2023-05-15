@@ -2,18 +2,15 @@ package main;
 
 public class FizzBuzz {
     public String numberToFizzBuzz(int inputNumber) {
+        String phrase = String.valueOf(inputNumber);
+
         if (inputNumber % 3 == 0) {
-            return "Fizz";
+            phrase = "Fizz";
         }
-        if(inputNumber == 5) {
-            return "Buzz";
+        if (inputNumber % 5 == 0) {
+            phrase = "Buzz";
         }
-        if(inputNumber == 25) {
-            return "Buzz";
-        }
-        if(inputNumber == 50){
-            return "Buzz";
-        }
-        return String.valueOf(inputNumber);
+
+        return phrase;
     }
 }
